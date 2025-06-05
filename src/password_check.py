@@ -2,32 +2,32 @@ import random
 import string
 import math
 
-# checks if the password is strong (length at least 8, cupper/lowercase, digits, special characters).
-def is_strong_password(pw):
-    if len(pw) < 8:
+# check if the password strong => length at least 8 chars, use upper and lowercase, use digits, use special characters
+def is_strong_password(password):
+    if len(password) < 8:
         return False
-    has_upper = any(c.isupper() for c in pw)
-    has_lower = any(c.islower() for c in pw)
-    has_digit = any(c.isdigit() for c in pw)
-    has_special = any(c in string.punctuation for c in pw)
+    has_upper = any(char.isupper() for char in password)
+    has_lower = any(char.islower() for char in password)
+    has_digit = any(char.isdigit() for char in password)
+    has_special = any(char in string.punctuation for char in password)
     return has_upper and has_lower and has_digit and has_special
 
-# check if the password weak
-def is_weak_password(pw):
-    return not is_strong_password(pw)
+# check if password weak => i.e. not strong password
+def is_weak_password(password):
+    return not is_strong_password(password)
 
-# sequential characters like abcd or 1234
-def has_sequential_chars(pw, seq_len=4):
-    for i in range(len(pw) - seq_len + 1):
-        segment = pw[i:i + seq_len]
+# sequential characters like abcd or 1234 => based on sorting
+def has_sequential_chars(password, seq_len=4):
+    for i in range(len(password) - seq_len + 1):
+        segment = password[i:i + seq_len]
         if segment.isalpha() and segment == ''.join(sorted(segment)):
             return True
         if segment.isdigit() and segment == ''.join(sorted(segment)):
             return True
     return False
 
-# password is in of common passwords
-def is_common_password(pw):
+# password is in one of common passwords
+def is_common_password(password):
     common_passwords = [
         "123456", "password", "123456789", "qwerty",
         "abc123", "letmein", "welcome", "admin", "12345678",
@@ -38,103 +38,104 @@ def is_common_password(pw):
         "123456789a", "qwerty123", "1qaz2wsx", "qazwsx",
         "1q2w3e", "qwerty1", "123qwe", "password123"
     ]
-    return pw in common_passwords
+    return password in common_passwords
 
-# generates a secure password that passes all checks
+# generate strong password => length can be specified
 def generate_secure_password(length=12):
     if length < 8:
         raise ValueError("Password length must be at least 8 characters.")
     while True:
-        pw = ''.join(random.choices(
+        password = ''.join(random.choices(
             string.ascii_letters + string.digits + string.punctuation,
             k=length
         ))
-        if is_strong_password(pw):
-            return pw
+        if is_strong_password(password):
+            return password
 
-# entropy of password in bits: measure of how unpredictable or secure a password is
-def password_entropy(pw):
+# measure password entropy => describes the randomness of the password
+# entropy = log2(size of character set \) * length
+def password_entropy(password):
     char_set_size = 0
-    if any(c.islower() for c in pw):
+    if any(char.islower() for char in password):
         char_set_size += 26
-    if any(c.isupper() for c in pw):
+    if any(char.isupper() for char in password):
         char_set_size += 26
-    if any(c.isdigit() for c in pw):
+    if any(char.isdigit() for char in password):
         char_set_size += 10
-    if any(c in string.punctuation for c in pw):
+    if any( char in string.punctuation for char in password):
         char_set_size += len(string.punctuation)
-    return 0 if char_set_size == 0 else len(pw) * math.log2(char_set_size)
+    return 0 if char_set_size == 0 else len(password) * math.log2(char_set_size)
 
-# number of character types
-def character_type_count(pw):
+# number of character types in the password => uppercase, lowercase, digits, special characters
+def character_type_count(password):
     return {
-        "uppercase": sum(1 for c in pw if c.isupper()),
-        "lowercase": sum(1 for c in pw if c.islower()),
-        "digits": sum(1 for c in pw if c.isdigit()),
-        "special": sum(1 for c in pw if c in string.punctuation)
+        "uppercase": sum(1 for char in password if char.isupper()),
+        "lowercase": sum(1 for char in password if char.islower()),
+        "digits": sum(1 for char in password if char.isdigit()),
+        "special": sum(1 for char in password if char in string.punctuation)
     }
 
-# count the number of special characters.
-def count_special_characters(pw):
-    return sum(1 for c in pw if c in string.punctuation)
+# number of special characters in the password
+def count_special_characters(password):
+    return sum(1 for char in password if char in string.punctuation)
 
-# checks if contains spaces.
-def has_spaces(pw):
-    return " " in pw
+# check if any spaces
+def has_spaces(password):
+    return " " in password
 
-# reverses the password.
-def reverse_password(pw):
-    return pw[::-1]
+# rreverse password
+def reverse_password(password):
+    return password[::-1]
 
-# hide the middle characters of the password.
-def mask_password(pw):
-    if len(pw) <= 4:
-        return "*" * len(pw)
-    return pw[0] + "*" * (len(pw) - 2) + pw[-1]
+# mask password for display purposes => show first and last character hide rest with *
+def mask_password(password):
+    if len(password) <= 4:
+        return "*" * len(password)
+    return password[0] + "*" * (len(password) - 2) + password[-1]
 
-# summarizing the password properties.
-def password_summary(pw):
+# summary of everything
+def password_summary(password):
     return {
-        "is_strong": is_strong_password(pw),
-        "is_weak": is_weak_password(pw),
-        "has_sequential_chars": has_sequential_chars(pw),
-        "is_common": is_common_password(pw),
-        "entropy": password_entropy(pw),
-        "character_types": character_type_count(pw),
-        "special_char_count": count_special_characters(pw),
-        "has_spaces": has_spaces(pw),
-        "reversed": reverse_password(pw),
-        "masked": mask_password(pw),
+        "is_strong": is_strong_password(password),
+        "is_weak": is_weak_password(password),
+        "has_sequential_chars": has_sequential_chars(password),
+        "is_common": is_common_password(password),
+        "entropy": password_entropy(password),
+        "character_types": character_type_count(password),
+        "special_char_count": count_special_characters(password),
+        "has_spaces": has_spaces(password),
+        "reversed": reverse_password(password),
+        "masked": mask_password(password),
     }
 
-# check if contains more than 3 repeated characters 
-def has_repeated_chars(pw, threshold=3):
-    return any(pw.count(char) > threshold for char in set(pw))
+# check for repeated characters in the password => variable threshold
+def has_repeated_chars(password, threshold=3):
+    return any(password.count(char) > threshold for char in set(password))
 
-# suggests improvements for strong password.
-def suggest_password_improvements(pw):
+# password improvement suggestions
+def suggest_password_improvements(password):
     suggestions = []
 
-    if len(pw) < 8:
+    if len(password) < 8:
         suggestions.append("Increase the password length to at least 8 characters.")
-    if not any(c.isupper() for c in pw):
+    if not any(char.isupper() for char in password):
         suggestions.append("Add at least one uppercase letter.")
-    if not any(c.islower() for c in pw):
+    if not any(char.islower() for char in password):
         suggestions.append("Add at least one lowercase letter.")
-    if not any(c.isdigit() for c in pw):
+    if not any(char.isdigit() for char in password):
         suggestions.append("Include at least one digit.")
-    if not any(c in string.punctuation for c in pw):
+    if not any(char in string.punctuation for char in password):
         suggestions.append("Include at least one special character.")
-    if has_sequential_chars(pw):
+    if has_sequential_chars(password):
         suggestions.append("Avoid sequential characters like 'abcd' or '1234'.")
-    if has_repeated_chars(pw):
+    if has_repeated_chars(password):
         suggestions.append("Avoid repeated characters.")
-    if is_common_password(pw):
+    if is_common_password(password):
         suggestions.append("Avoid using common passwords.")
 
     return suggestions if suggestions else ["Your password is strong!"]
 
-# memorable password using random words and special characters.
+# memorable password generator => uses a list of words
 def generate_memorable_password(words=4):
     word_list = [
         "apple", "banana", "cherry", "dragon", "elephant",
@@ -145,9 +146,9 @@ def generate_memorable_password(words=4):
     digit = random.choice(string.digits)
     return f"{password}{special_char}{digit}"
 
-# check if is a palindrome (anna)
-def is_palindrome_password(pw):
-    return pw == pw[::-1]
+# check if password palindrome
+def is_palindrome_password(password):
+    return password == password[::-1]
 
 def main():
     print("Welcome to the Password Security Analyzer!")
@@ -164,17 +165,17 @@ def main():
         try:
             choice = int(input("\nEnter your choice (1-7): "))
             if choice == 1:
-                pw = input("Enter the password to check: ")
-                print("Strong password:", is_strong_password(pw))
+                password = input("Enter the password to check: ")
+                print("Strong password:", is_strong_password(password))
             elif choice == 2:
-                pw = input("Enter the password to summarize: ")
-                summary = password_summary(pw)
+                password = input("Enter the password to summarize: ")
+                summary = password_summary(password)
                 print("Password Summary:")
                 for key, value in summary.items():
                     print(f"  {key}: {value}")
             elif choice == 3:
-                pw = input("Enter the password to improve: ")
-                suggestions = suggest_password_improvements(pw)
+                password = input("Enter the password to improve: ")
+                suggestions = suggest_password_improvements(password)
                 print("Suggestions to improve your password:")
                 for suggestion in suggestions:
                     print(f"  - {suggestion}")
@@ -185,8 +186,8 @@ def main():
                 words = int(input("Enter the number of words for the memorable password: "))
                 print("Generated Memorable Password:", generate_memorable_password(words))
             elif choice == 6:
-                pw = input("Enter the password to check for palindrome: ")
-                print("Is Palindrome:", is_palindrome_password(pw))
+                password = input("Enter the password to check for palindrome: ")
+                print("Is Palindrome:", is_palindrome_password(password))
             elif choice == 7:
                 print("Exiting Password Security Analyzer. Goodbye!")
                 break
