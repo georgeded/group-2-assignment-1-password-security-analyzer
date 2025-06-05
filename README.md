@@ -9,8 +9,23 @@ Programming language: Python
 ## Initial tests
 
 ### Tests
+### Initial Test 1 (George)
 
-TODO: Add their code here
+```python
+import unittest
+from src.password_check import is_strong_password
+
+class TestStrongPassword(unittest.TestCase):
+    def test_is_strong_password_ShortPassword_False(self):
+        pw = "Ab1@"
+        res = is_strong_password(pw)
+        self.assertFalse(res, "Password shorter than 8 characters should not be strong.")
+
+if __name__ == '__main__':
+    unittest.main()
+```
+#### Description
+This test validates the is_strong_password function by checking if it correctly identifies passwords shorter than 8 characters as not strong. The password "Ab1@" is used as input, and the expected result is False.
 
 ### Coverage of initial tests
 
@@ -50,7 +65,7 @@ TODO: Write what each group member did. Use the following table for that and add
 
 | Member | Three functions (names with links to the code on the repository) created | Initial test (name) | Other tests (names) |
 | --- | --- | --- | --- |
-| Member A | | | |
+| Georgios Dedempilis | | | |
 | Member B | | | |
 | Member C | | | |
 | Member D | | | |
