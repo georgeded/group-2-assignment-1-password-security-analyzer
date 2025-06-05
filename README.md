@@ -52,6 +52,33 @@ if __name__ == "__main__":
 #### Description
 My test validates suggest_password_improvements() function by checking if a strong password is identified correctly, and if a password which needs improvements is correctly identified.
 
+#### Initial Test 3 (Emincan)
+```python
+import unittest
+from src.password_check import mask_password
+
+class TestMaskPassword(unittest.TestCase):
+
+    def test_short_password_all_hidden(self):
+        self.assertEqual(mask_password("abc"), "***")
+        self.assertEqual(mask_password("1234"), "****")
+
+    def test_medium_password_masked(self):
+        self.assertEqual(mask_password("abcde"), "a***e")
+        self.assertEqual(mask_password("hello"), "h***o")
+
+    def test_long_password_masked(self):
+        self.assertEqual(mask_password("password123"), "p*********3")
+
+    def test_empty_password(self):
+        self.assertEqual(mask_password(""), "")
+
+if __name__ == "__main__":
+    unittest.main()
+```
+#### Description
+My test validates the mask_password() function by checking if short passwords are fully hidden, and if longer passwords show only the first and last character while masking the rest. This is verified through multiple test cases, including short, medium, long, and empty passwords.
+
 ### Coverage of initial tests
 
 TODO: Inform the name of the existing tool that was executed and how it was executed
