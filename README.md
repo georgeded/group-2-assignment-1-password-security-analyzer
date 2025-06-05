@@ -9,7 +9,7 @@ Programming language: Python
 ## Initial tests
 
 ### Tests
-### Initial Test 1 (George)
+#### Initial Test 1 (George)
 
 ```python
 import unittest
