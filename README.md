@@ -65,7 +65,7 @@ TODO: Write what each group member did. Use the following table for that and add
 
 | Member | Three functions (names with links to the code on the repository) created | Initial test (name) | Other tests (names) |
 | --- | --- | --- | --- |
-| Georgios Dedempilis | | | |
+| Georgios Dedempilis  | [is_strong_password](src/password_check.py#L6), [is_weak_password](src/password_check.py#L14), [has_sequential_chars](src/password_check.py#L18), [has_spaces](src/password_check.py#L77), [reverse_password](src/password_check.py#L81) | TestStrongPassword (Initial Test 1) |                     |
 | Member B | | | |
 | Member C | | | |
 | Member D | | | |
