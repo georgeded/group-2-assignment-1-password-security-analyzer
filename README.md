@@ -117,7 +117,7 @@ TODO: Write what each group member did. Use the following table for that and add
 
 | Member | Three functions (names with links to the code on the repository) created | Initial test (name) | Other tests (names) |
 | --- | --- | --- | --- |
-| Georgios Dedempilis  | [is_strong_password](src/password_check.py#L6), [is_weak_password](src/password_check.py#L14), [has_sequential_chars](src/password_check.py#L18), [has_spaces](src/password_check.py#L77), [password_entropy](src/password_check.py#L50) | TestStrongPassword (Initial Test 1) |                     |
+| Georgios Dedempilis  | [is_strong_password](src/password_check.py#L6), [is_weak_password](src/password_check.py#L14), [has_sequential_chars](src/password_check.py#L18), [has_spaces](src/password_check.py#L77), [password_entropy](src/password_check.py#L50) | test_strong_password.py (Initial Test 1) |                     |
 | Dean Kok | [suggest_password_improvements](src/password_check.py#L115), [is_common_password](src/password_check.py#30), [has_repeated_chars](src/password_check.py#111)| test_suggest_improvement.py (Initial Test 2) | |
-| Emincan Yildiz       | [main](src/password_check.py#L150), [generate_memorable_password](src/password_check.py#L125), [mask_password](src/password_check.py#L85) | TestMaskPassword (Initial Test 3)  |                     |
+| Emincan Yildiz       | [main](src/password_check.py#L150), [generate_memorable_password](src/password_check.py#L125), [mask_password](src/password_check.py#L85) | test_mask_password.py (Initial Test 3)  |                     |
 | Ibaad Rahman         | [count_special_characters](src/password_check.py#L73), [reverse_password](src/password_check.py#L81), [character_type_count](src/password_check.py#L50), [password_summary](src/password_check.py#L96) |  |                     |
