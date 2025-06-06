@@ -216,7 +216,7 @@ This test thoroughly evaluates the `is_weak_password()` function by addressing a
 - Passwords containing spaces
 - Strong passwords that should not be classified as weak
 
-By covering all logical branches, this test ensures the function behaves as expected for various password scenarios. There were no previous tests for this function, so its initial coverage was 0%
+By covering all logical branches, this test ensures the function behaves as expected for various password scenarios. There were no previous tests for this function, so its initial coverage was 0%.
 
 
 **Coverage improvement:** 0% → 95%
@@ -264,7 +264,7 @@ This test ensures comprehensive coverage for the `is_common_password()` function
 - Reject passwords that are not in the list
 - Handle edge cases like empty strings and single spaces
 
-By testing all logical branches, this test guarantees the function accurately differenctiation between common and uncommon passwords. There were no previous tests for this function, so its initial coverage was 0%
+By testing all logical branches, this test guarantees the function accurately differenctiation between common and uncommon passwords. There were no previous tests for this function, so its initial coverage was 0%.
 
 **Coverage improvement:** 0% → 95%
 
@@ -287,7 +287,7 @@ This test expands the coverage for the `generate_secure_password()` function by 
 - Rejects invalid lengths (too short or negative values)
 - Successfully generates passwords at the minimum and maximum valid lengths
 
-By testing all logical branches, this test ensures the function reliably produces secure passwords under various conditions. There were no previous tests for this function, so its initial coverage was 0%
+By testing all logical branches, this test ensures the function reliably produces secure passwords under various conditions. There were no previous tests for this function, so its initial coverage was 0%.
 
 **Coverage improvement:** 0% → 96%
 
@@ -311,7 +311,7 @@ This test ensures the `password_entropy()` function is thoroughly evaluated by t
 - Passwords containing only uppercase, lowercase, digits, or special characters
 - Mixed passwords with a combination of all character types
 
-By covering all logical branches, this test guarantees the function accurately calculates entropy for diverse password scenarios. There were no previous tests for this function, so its initial coverage was 0%
+By covering all logical branches, this test guarantees the function accurately calculates entropy for diverse password scenarios. There were no previous tests for this function, so its initial coverage was 0%.
 
 **Coverage improvement:** 0% → 96%
 
