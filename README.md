@@ -79,6 +79,30 @@ if __name__ == "__main__":
 #### Description
 My test validates the mask_password() function by checking if short passwords are fully hidden, and if longer passwords show only the first and last character while masking the rest. This is verified through multiple test cases, including short, medium, long, and empty passwords.
 
+#### Initial Test 4 (Ibaad)
+```python
+import unittest
+from src.password_check import count_special_characters
+
+class TestCountSpecialCharacters(unittest.TestCase):
+    def test_special_chars_present(self):
+        self.assertEqual(count_special_characters("abc!@#123"), 3)
+
+    def test_no_special_chars(self):
+        self.assertEqual(count_special_characters("abc123"), 0)
+
+    def test_all_special_chars(self):
+        self.assertEqual(count_special_characters("!@#$%^"), 6)
+
+    def test_empty_password(self):
+        self.assertEqual(count_special_characters(""), 0)
+
+if __name__ == "__main__":
+    unittest.main()
+```
+#### Description
+This test verifies that the count_special_characters function correctly returns the number of special characters in various passwords (mixed, none, all special, and empty).
+
 ### Coverage of initial tests
 
 TODO: Inform the name of the existing tool that was executed and how it was executed
