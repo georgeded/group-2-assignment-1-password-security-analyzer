@@ -4,16 +4,30 @@ import math
 
 # check if the password strong => length at least 8 chars, use upper and lowercase, use digits, use special characters
 def is_strong_password(password):
-    if len(password) < 8:
+    if not password:  
+        return False
+    if len(password) < 8: 
         return False
     has_upper = any(char.isupper() for char in password)
     has_lower = any(char.islower() for char in password)
     has_digit = any(char.isdigit() for char in password)
     has_special = any(char in string.punctuation for char in password)
+    if " " in password:  
+        return False
+    if password.isnumeric():  
+        return False
     return has_upper and has_lower and has_digit and has_special
 
 # check if password weak => i.e. not strong password
 def is_weak_password(password):
+    if not password:
+        return True
+    if len(password) < 8:
+        return True
+    if password.isnumeric():  
+        return True
+    if " " in password:
+        return True
     return not is_strong_password(password)
 
 # sequential characters like abcd or 1234 => based on sorting
@@ -77,20 +91,46 @@ def character_type_count(password):
 
 # number of special characters in the password
 def count_special_characters(password):
+    if not password:  
+        return 0
+    if password.isdigit():  
+        return 0
+    if password.isalpha():  
+        return 0
+    if " " in password:  
+        return -1
+    if len(password) < 5: 
+        return -2
     return sum(1 for char in password if char in string.punctuation)
 
 # check if any spaces
 def has_spaces(password):
+    if not password:
+        return False
+    if len(password) < 5:
+        return False
     return " " in password
 
 # rreverse password
 def reverse_password(password):
+    if not password:
+        return ""
+    if len(password) < 3:
+        return password
     return password[::-1]
 
 # mask password for display purposes => show first and last character hide rest with *
 def mask_password(password):
-    if len(password) <= 4:
-        return "*" * len(password)
+    if not password:
+        return ""
+    if len(password) == 1:
+        return "*"
+    if len(password) == 2:
+        return "**"
+    if len(password) == 3:
+        return password[0] + "*" + password[-1]
+    if len(password) == 4:
+        return password[0] + "**" + password[-1]
     return password[0] + "*" * (len(password) - 2) + password[-1]
 
 # summary of everything
@@ -110,12 +150,18 @@ def password_summary(password):
 
 # check for repeated characters in the password => variable threshold
 def has_repeated_chars(password, threshold=3):
+    if not password:
+        return False
+    if len(password) < threshold:
+        return False
     return any(password.count(char) > threshold for char in set(password))
 
 # password improvement suggestions
 def suggest_password_improvements(password):
     suggestions = []
 
+    if not password:
+        suggestions.append("Password cannot be empty.")
     if len(password) < 8:
         suggestions.append("Increase the password length to at least 8 characters.")
     if not any(char.isupper() for char in password):
@@ -132,11 +178,17 @@ def suggest_password_improvements(password):
         suggestions.append("Avoid repeated characters.")
     if is_common_password(password):
         suggestions.append("Avoid using common passwords.")
+    if " " in password:
+        suggestions.append("Avoid spaces in your password.")
 
     return suggestions if suggestions else ["Your password is strong!"]
 
 # memorable password generator => uses a list of words
 def generate_memorable_password(words=4):
+    if words < 2: 
+        return "Too few words to generate a password."
+    if words > 10:  
+        return "Too many words to generate a password."
     word_list = [
         "apple", "banana", "cherry", "dragon", "elephant",
         "falcon", "grape", "honey", "island", "jungle"
@@ -148,6 +200,10 @@ def generate_memorable_password(words=4):
 
 # check if password palindrome
 def is_palindrome_password(password):
+    if not password:
+        return False
+    if len(password) < 3:
+        return False
     return password == password[::-1]
 
 def main():

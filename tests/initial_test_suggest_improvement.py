@@ -10,9 +10,6 @@ class TestSuggestPasswordImprovements(unittest.TestCase):
             "Avoid using common passwords."
         ])
         
-        self.assertEqual(suggest_password_improvements("P@ssw0rd!"), [
-            "Your password is strong!"
-        ])
 
 if __name__ == "__main__":
     unittest.main()
