@@ -89,6 +89,87 @@ TODO: Show the coverage results provided by the existing tool with a screenshot
 
 ### Individual tests
 
+-----------Test cases of Emincan Yildiz-----------
+
+**Group Member:** Emincan Yildiz
+
+**Test 1:** test_mask_password_improved_emincan.py
+
+**Patch/Commit:** [View Commit](https://github.com/georgeded/group-2-assignment-1-password-security-analyzer/commit/9fede675a589494a2be3537962baee75aaa64771)
+
+**Screenshot: Old Coverage Result (Before Improvement)**
+Placeholder for screenshot
+
+**Screenshot: New Coverage Result (After Improvement)**
+Placeholder for screenshot
+
+**Coverage Improvement Explanation:**
+This improved test significantly expands the coverage for the mask_password() function. While the initial test only checked short and medium passwords, this improved version includes edge cases such as:
+- Empty string
+- Very short passwords (length 1–2)
+- Exactly 4 characters
+- Longer passwords
+- Passwords with digits and special characters
+These test cases activate all logical branches in the function and ensure correct behavior for different string lengths.
+
+**Coverage improvement:** ...% → ...%
+
+---------------------------
+
+**Group Member:** Emincan Yildiz
+
+**Test 2:** test_character_type_count_emincan.py
+
+**Patch/Commit:** [View Commit](https://github.com/georgeded/group-2-assignment-1-password-security-analyzer/commit/dce97b74e3f1c7400e18d68f672e2467a2c2c72c).
+
+**Screenshot: Old Coverage Result (Before Improvement)**
+Placeholder for screenshot
+
+**Screenshot: New Coverage Result (After Improvement)**
+Placeholder for screenshot
+
+**Coverage Improvement Explanation:**
+There were no previous tests for the character_type_count() function, so its initial coverage was 0%.
+This test improves coverage by thoroughly checking all character type branches:
+- Only uppercase characters
+- Only lowercase characters
+- Only digits
+- Only special characters
+- Mixed characters (at least one of each type)
+- Edge case with an empty string
+Each condition in the function is now triggered by specific inputs, ensuring that all logical paths are tested.
+
+**Coverage improvement:** 0% → ...%
+
+---------------------------
+
+**Group Member:** Emincan Yildiz
+
+**Test 3:** test_has_sequential_chars_emincan.py
+
+**Patch/Commit:** [View Commit](https://github.com/georgeded/group-2-assignment-1-password-security-analyzer/commit/a65698b3c15c160dcbd93f996b372419b971a636).
+
+**Screenshot: Old Coverage Result (Before Improvement)**
+Placeholder for screenshot
+
+**Screenshot: New Coverage Result (After Improvement)**
+Placeholder for screenshot
+
+**Coverage Improvement Explanation:**
+There were no previous tests for the has_sequential_chars() function, so its initial coverage was 0%.
+This improved test ensures all key logical paths are exercised by including inputs with:
+- Alphabetic sequences ("abcd", "lmno")
+- Numeric sequences ("1234", "a1234z")
+- Sequences in the middle of the string ("xxabcdxx")
+- Custom sequence lengths ("abc" with seq_len=3)
+- Strings shorter than the sequence length ("ab")
+- Strings without any sequence ("a1b2c3")
+All conditions and loop paths in the function are exercised through the test cases, providing maximum practical coverage based on the function’s logic.
+
+**Coverage improvement:** % → ...%
+
+---------------------------
+
 TODO: The following is supposed to be repeated for each group member
 
 TODO: Group member name
@@ -119,5 +200,5 @@ TODO: Write what each group member did. Use the following table for that and add
 | --- | --- | --- | --- |
 | Georgios Dedempilis  | [is_strong_password](src/password_check.py#L6), [is_weak_password](src/password_check.py#L14), [has_sequential_chars](src/password_check.py#L18), [has_spaces](src/password_check.py#L77), [password_entropy](src/password_check.py#L50) | test_strong_password.py (Initial Test 1) |                     |
 | Dean Kok | [suggest_password_improvements](src/password_check.py#L115), [is_common_password](src/password_check.py#30), [has_repeated_chars](src/password_check.py#111)| test_suggest_improvement.py (Initial Test 2) | |
-| Emincan Yildiz       | [main](src/password_check.py#L150), [generate_memorable_password](src/password_check.py#L125), [mask_password](src/password_check.py#L85) | test_mask_password.py (Initial Test 3)  |                     |
-| Ibaad Rahman         | [count_special_characters](src/password_check.py#L73), [reverse_password](src/password_check.py#L81), [character_type_count](src/password_check.py#L50), [password_summary](src/password_check.py#L96) |  |                     |
+| Emincan Yildiz | [main](src/password_check.py#L150), [generate_memorable_password](src/password_check.py#L125), [mask_password](src/password_check.py#L85) | test_mask_password.py (Initial Test 3) | test_mask_password_improved_emincan.py, test_character_type_count_emincan.py, test_has_sequential_chars_emincan.py |
+| Ibaad Rahman | [count_special_characters](src/password_check.py#L73), [reverse_password](src/password_check.py#L81), [character_type_count](src/password_check.py#L50), [password_summary](src/password_check.py#L96) |  |                     |
