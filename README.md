@@ -209,14 +209,15 @@ All conditions and loop paths in the function are exercised through the test cas
 Placeholder for screenshot
 
 **Coverage Improvement Explanation:**  
-This test significantly expands the coverage for the `is_weak_password()` function. While initialy there was no test for this function, this version includes all edge cases such as:
-- Empty password
-- Short passwords
-- Passwords missing uppercase, lowercase, digits, or special characters
-- Passwords with spaces
-- Valid strong passwords
+This test thoroughly evaluates the `is_weak_password()` function by addressing all possible edge cases. It ensures the function correctly identifies weak passwords, including:
+- Empty passwords
+- Short passwords that fail the length requirement
+- Passwords missing essential components like uppercase letters, lowercase letters, digits, or special characters
+- Passwords containing spaces
+- Strong passwords that should not be classified as weak
 
-These test cases activate all logical branches in the function and ensure correct behavior for different password types.
+By covering all logical branches, this test ensures the function behaves as expected for various password scenarios.
+
 
 **Coverage improvement:** 0% → 95%
 
@@ -233,14 +234,15 @@ These test cases activate all logical branches in the function and ensure correc
 Placeholder for screenshot
 
 **Coverage Improvement Explanation:**  
-This improved test significantly expands the coverage for the `is_strong_password()` function. While the initial test only checked basic cases, this improved version includes edge cases such as:
-- Short passwords
-- Passwords missing uppercase, lowercase, digits, or special characters
-- Passwords with spaces
-- Numeric-only passwords
-- Valid strong passwords
+This test enhances the coverage for the `is_strong_password()` function by introducing edge cases that were previously untested. It ensures the function correctly identifies strong passwords and rejects weak ones, including:
+- Short passwords that fail the minimum length requirement
+- Passwords missing one or more essential components (uppercase, lowercase, digits, special characters)
+- Numeric-only passwords that lack complexity
+- Passwords with spaces that reduce security
+- Valid strong passwords that meet all criteria
 
-These test cases activate all logical branches in the function and ensure correct behavior for different password types.
+The test ensures all logical branches are exercised, validating the function's robustness.
+
 
 **Coverage improvement:** 89% → 95%
 
@@ -257,12 +259,12 @@ These test cases activate all logical branches in the function and ensure correc
 Placeholder for screenshot
 
 **Coverage Improvement Explanation:**  
-This test significantly expands the coverage for the `is_common_password()` function. Initialy there was no test for this function, so its initial coverage was 0%. This version includes all edge cases such as:
-- Common passwords from the predefined list
-- Passwords not in the list
-- Edge cases like empty strings and single spaces
+This test ensures comprehensive coverage for the `is_common_password()` function by testing various scenarios. It validates the function's ability to:
+- Identify passwords from the predefined list of common passwords
+- Reject passwords that are not in the list
+- Handle edge cases like empty strings and single spaces
 
-These test cases activate all logical branches in the function and ensure correct behavior for different password types.
+By testing all logical branches, this test guarantees the function accurately differenctiation between common and uncommon passwords.
 
 **Coverage improvement:** 0% → 95%
 
@@ -279,13 +281,13 @@ These test cases activate all logical branches in the function and ensure correc
 Placeholder for screenshot
 
 **Coverage Improvement Explanation:**  
-This test significantly expands the coverage for the `generate_secure_password()` function. Initialy there was no test for this function, so its initial coverage was 0%. This version includes all edge cases such as:
-- Default length
-- Custom lengths
-- Invalid lengths
-- Minimum and maximum valid lengths
+This test expands the coverage for the `generate_secure_password()` function by addressing edge cases and validating its behavior for different inputs. It ensures the function:
+- Generates passwords of default length
+- Handles custom lengths correctly
+- Rejects invalid lengths (too short or negative values)
+- Successfully generates passwords at the minimum and maximum valid lengths
 
-These test cases activate all logical branches in the function and ensure correct behavior for different password lengths.
+By testing all logical branches, this test ensures the function reliably produces secure passwords under various conditions.
 
 **Coverage improvement:** 0% → 96%
 
@@ -302,14 +304,14 @@ These test cases activate all logical branches in the function and ensure correc
 Placeholder for screenshot
 
 **Coverage Improvement Explanation:**  
-This test significantly expands the coverage for the `password_entropy()` function. Initialy there was no test for this function, so its initial coverage was 0%. This version includes all edge cases such as:
+This test ensures the `password_entropy()` function is thoroughly evaluated by testing a wide range of inputs. It validates the function's ability to calculate entropy for:
 - Empty passwords
 - Single-character passwords
-- Repeated characters
-- Passwords with only uppercase, lowercase, digits, or special characters
-- Mixed passwords
+- Passwords with repeated characters
+- Passwords containing only uppercase, lowercase, digits, or special characters
+- Mixed passwords with a combination of all character types
 
-These test cases activate all logical branches in the function and ensure correct behavior for different password types.
+By covering all logical branches, this test guarantees the function accurately calculates entropy for diverse password scenarios.
 
 **Coverage improvement:** 0% → 96%
 
