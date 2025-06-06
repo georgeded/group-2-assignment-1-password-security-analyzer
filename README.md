@@ -200,7 +200,7 @@ All conditions and loop paths in the function are exercised through the test cas
 
 **Test 1:** test_is_weak_password_georgios.py
 
-**Patch/Commit:** [View Commit](https://github.com/georgeded/group-2-assignment-1-password-security-analyzer/commit/abc123456789)
+**Patch/Commit:** [View Commit](https://github.com/georgeded/group-2-assignment-1-password-security-analyzer/commit/f43c7bfe0727c1055156d54966b6391f68bc52a3)
 
 **Screenshot: Old Coverage Result (Before Improvement)**  
 ![Old Coverage Result](reports/initial%20coverability%20analysis%20.png)
@@ -224,7 +224,7 @@ These test cases activate all logical branches in the function and ensure correc
 
 **Test 2:** test_strong_password_improved_georgios.py
 
-**Patch/Commit:** [View Commit](https://github.com/georgeded/group-2-assignment-1-password-security-analyzer/commit/def456789abc)
+**Patch/Commit:** [View Commit](https://github.com/georgeded/group-2-assignment-1-password-security-analyzer/commit/f43c7bfe0727c1055156d54966b6391f68bc52a3)
 
 **Screenshot: Old Coverage Result (Before Improvement)**  
 ![Old Coverage Result](reports/initial%20coverability%20analysis%20.png)
@@ -248,7 +248,7 @@ These test cases activate all logical branches in the function and ensure correc
 
 **Test 3:** test_is_common_password_georgios.py
 
-**Patch/Commit:** [View Commit](https://github.com/georgeded/group-2-assignment-1-password-security-analyzer/commit/ghi789abc123)
+**Patch/Commit:** [View Commit](https://github.com/georgeded/group-2-assignment-1-password-security-analyzer/commit/f43c7bfe0727c1055156d54966b6391f68bc52a3)
 
 **Screenshot: Old Coverage Result (Before Improvement)**  
 ![Old Coverage Result](reports/initial%20coverability%20analysis%20.png)
@@ -257,7 +257,7 @@ These test cases activate all logical branches in the function and ensure correc
 Placeholder for screenshot
 
 **Coverage Improvement Explanation:**  
-This test significantly expands the coverage for the `is_common_password()` function. While initialy there was no test for this function, this version includes all edge cases such as:
+This test significantly expands the coverage for the `is_common_password()` function. Initialy there was no test for this function, so its initial coverage was 0%. This version includes all edge cases such as:
 - Common passwords from the predefined list
 - Passwords not in the list
 - Edge cases like empty strings and single spaces
@@ -270,7 +270,7 @@ These test cases activate all logical branches in the function and ensure correc
 
 **Test 4:** test_generate_secure_password_georgios.py
 
-**Patch/Commit:** [View Commit](https://github.com/georgeded/group-2-assignment-1-password-security-analyzer/commit/jkl123abc456)
+**Patch/Commit:** [View Commit](https://github.com/georgeded/group-2-assignment-1-password-security-analyzer/commit/f43c7bfe0727c1055156d54966b6391f68bc52a3)
 
 **Screenshot: Old Coverage Result (Before Improvement)**  
 ![Old Coverage Result](reports/initial%20coverability%20analysis%20.png)
@@ -279,7 +279,7 @@ These test cases activate all logical branches in the function and ensure correc
 Placeholder for screenshot
 
 **Coverage Improvement Explanation:**  
-This test significantly expands the coverage for the `generate_secure_password()` function. While initialy there was no test for this function, this version includes all edge cases such as:
+This test significantly expands the coverage for the `generate_secure_password()` function. Initialy there was no test for this function, so its initial coverage was 0%. This version includes all edge cases such as:
 - Default length
 - Custom lengths
 - Invalid lengths
@@ -293,7 +293,7 @@ These test cases activate all logical branches in the function and ensure correc
 
 **Test 5:** test_password_entropy_georgios.py
 
-**Patch/Commit:** [View Commit](https://github.com/georgeded/group-2-assignment-1-password-security-analyzer/commit/mno456abc789)
+**Patch/Commit:** [View Commit](https://github.com/georgeded/group-2-assignment-1-password-security-analyzer/commit/f43c7bfe0727c1055156d54966b6391f68bc52a3)
 
 **Screenshot: Old Coverage Result (Before Improvement)**  
 ![Old Coverage Result](reports/initial%20coverability%20analysis%20.png)
@@ -302,7 +302,7 @@ These test cases activate all logical branches in the function and ensure correc
 Placeholder for screenshot
 
 **Coverage Improvement Explanation:**  
-This test significantly expands the coverage for the `password_entropy()` function. While initialy there was no test for this function, this version includes all edge cases such as:
+This test significantly expands the coverage for the `password_entropy()` function. Initialy there was no test for this function, so its initial coverage was 0%. This version includes all edge cases such as:
 - Empty passwords
 - Single-character passwords
 - Repeated characters
@@ -333,9 +333,11 @@ Repeat for other tests...
 
 ### Overall
 
-TODO: Provide a screenshot of the old coverage results by running an existing tool (the same as you already showed above)
+**Screenshot: Old Coverage Result (Before Improvement)**  
+![Old Coverage Result](reports/initial%20coverability%20analysis%20.png)
 
-TODO: Provide a screenshot of the new coverage results by running the existing tool using all test modifications made by the group
+**Screenshot: New Coverage Result (After Improvement)**  
+Placeholder for screenshot
 
 ## Statement of individual contributions
 
