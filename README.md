@@ -373,7 +373,6 @@ This test evaluates whether the is_palindrome_password() function works correctl
 ![Old Coverage Result](reports/initial%20coverability%20analysis%20.png)
 
 **Screenshot: New Coverage Result (After Improvement)**  
-Placeholder for screenshot
 
 **Coverage Improvement Explanation:**  
 This test evaluates whether the generate_memorable_password() function works correctly.
@@ -387,6 +386,7 @@ This test evaluates whether the generate_memorable_password() function works cor
 
 **Screenshot: New Coverage Result (After Improvement)**  
 Placeholder for screenshot
+![New Coverage Result](reports/final_coverability.png)
 
 ## Statement of individual contributions
 
