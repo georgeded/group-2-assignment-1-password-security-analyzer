@@ -33,3 +33,6 @@ class TestCountSpecialCharactersImproved(unittest.TestCase):
     def test_numbers_and_specials(self):
         self.assertEqual(count_special_characters("1234!%"), 2)
         self.assertEqual(count_special_characters("9*8(7)"), 3) 
+
+if __name__ == "__main__":
+    unittest.main()

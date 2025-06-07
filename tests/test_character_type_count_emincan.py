@@ -45,6 +45,3 @@ class TestCharacterTypeCount(unittest.TestCase):
         self.assertEqual(result["lowercase"], 0)
         self.assertEqual(result["digits"], 0)
         self.assertEqual(result["special"], 0)
-
-if __name__ == "__main__":
-    unittest.main()

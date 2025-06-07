@@ -316,6 +316,31 @@ By covering all logical branches, this test guarantees the function accurately c
 **Coverage improvement:** 0% → 96%
 
 -----------Test cases of Dean Kok-----------
+**Group Member:** Dean Kok
+
+**Test 1:** test_suggest_improvement.py
+
+**Patch/Commit:** [View Commit]()
+
+**Screenshot: Old Coverage Result (Before Improvement)**  
+![Old Coverage Result](reports/initial%20coverability%20analysis%20.png)
+
+**Screenshot: New Coverage Result (After Improvement)**  
+Placeholder for screenshot
+
+**Coverage Improvement Explanation:**  
+This test thoroughly evaluates the `suggest_password_improvements()` function by addressing all possible edge cases. It ensures the function correctly identifies passwords which can be improved, based on the absence of certain key characteristics of strong passwords. It checks the following:
+- Short (<8 characters) passwords
+- At least one uppercase letter
+- At least one lowercase letter
+- At least one digit
+- At least one special character
+- No sequential characters in the password
+- No repeated characters in the password
+- Not a common password (predefined list)
+- No spaces in the password
+
+**Coverage improvement:** 86% → 100%
 
 ### Overall
 

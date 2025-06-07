@@ -25,3 +25,6 @@ class TestGenerateSecurePassword(unittest.TestCase):
         password = generate_secure_password(64)
         self.assertTrue(is_strong_password(password))
         self.assertEqual(len(password), 64)
+
+if __name__ == "__main__":
+    unittest.main()

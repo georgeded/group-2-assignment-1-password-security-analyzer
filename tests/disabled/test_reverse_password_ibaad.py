@@ -30,3 +30,6 @@ class TestReversePassword(unittest.TestCase):
         self.assertEqual(reverse_password(" "), " ")
         self.assertEqual(reverse_password("a b c"), "c b a")
         self.assertEqual(reverse_password("  abc  "), "  cba  ")
+
+if __name__ == "__main__":
+    unittest.main()

@@ -25,3 +25,6 @@ class TestStrongPasswordImproved(unittest.TestCase):
 
     def test_valid_strong_password(self):
         self.assertTrue(is_strong_password("Abc@1234"))
+
+if __name__ == "__main__":
+    unittest.main()

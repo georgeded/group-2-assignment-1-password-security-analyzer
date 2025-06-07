@@ -46,11 +46,7 @@ def is_common_password(password):
         "123456", "password", "123456789", "qwerty",
         "abc123", "letmein", "welcome", "admin", "12345678",
         "password1", "1234567", "iloveyou", "12345",
-        "1234567890", "123123", "qwertyuiop", "monkey",
-        "1234", "sunshine", "123321", "trustno1",
-        "dragon", "baseball", "football", "123456a", "1q2w3e4r"
-        "123456789a", "qwerty123", "1qaz2wsx", "qazwsx",
-        "1q2w3e", "qwerty1", "123qwe", "password123"
+        "1234567890", "123123", "password123", "Password123!",
     ]
     return password in common_passwords
 

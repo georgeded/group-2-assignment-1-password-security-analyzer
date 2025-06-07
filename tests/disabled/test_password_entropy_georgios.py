@@ -28,3 +28,6 @@ class TestPasswordEntropy(unittest.TestCase):
 
     def test_repeated_characters(self):
         self.assertAlmostEqual(password_entropy("aaa"), 14.1, places=1)
+
+if __name__ == "__main__":
+    unittest.main()

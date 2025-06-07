@@ -34,3 +34,6 @@ class TestPasswordSummary(unittest.TestCase):
         self.assertTrue(summary["is_weak"])
         self.assertTrue(summary["has_spaces"])
         self.assertEqual(summary["masked"], "p********1")  
+
+if __name__ == "__main__":
+    unittest.main()

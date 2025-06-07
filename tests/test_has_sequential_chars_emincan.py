@@ -29,6 +29,3 @@ class TestHasSequentialChars(unittest.TestCase):
 
     def test_mixed_but_ordered_letters(self):
         self.assertTrue(has_sequential_chars("lmno"))
-
-if __name__ == "__main__":
-    unittest.main()

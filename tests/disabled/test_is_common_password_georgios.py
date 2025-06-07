@@ -19,3 +19,6 @@ class TestIsCommonPassword(unittest.TestCase):
     def test_edge_cases(self):
         self.assertFalse(is_common_password(""))
         self.assertFalse(is_common_password(" "))
+
+if __name__ == "__main__":
+    unittest.main()

@@ -22,3 +22,6 @@ class TestIsWeakPassword(unittest.TestCase):
 
     def test_valid_strong_password(self):
         self.assertFalse(is_weak_password("Abc@1234"))
+
+if __name__ == "__main__":
+    unittest.main()

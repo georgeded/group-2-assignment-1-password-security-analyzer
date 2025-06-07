@@ -28,6 +28,3 @@ class TestMaskPasswordImproved(unittest.TestCase):
 
     def test_alphabetic_password(self):
         self.assertEqual(mask_password("abcdef"), "a****f")
-
-if __name__ == "__main__":
-    unittest.main()
