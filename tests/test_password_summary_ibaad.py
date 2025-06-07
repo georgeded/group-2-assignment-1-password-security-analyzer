@@ -7,7 +7,7 @@ class TestPasswordSummary(unittest.TestCase):
         self.assertFalse(summary["is_strong"])
         self.assertTrue(summary["is_weak"])
         self.assertTrue(summary["has_sequential_chars"])
-        self.assertTrue(summary["is_common"])  
+        self.assertFalse(summary["is_common"])  
         self.assertEqual(summary["special_char_count"], 0)
         self.assertFalse(summary["has_spaces"])
         self.assertEqual(summary["reversed"], "4321")

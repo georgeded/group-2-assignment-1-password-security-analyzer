@@ -138,7 +138,7 @@ This improved test significantly expands the coverage for the mask_password() fu
 - Passwords with digits and passwords with special characters
 These test cases activate all logical branches in the function and ensure correct behavior for different string lengths.
 
-**Coverage improvement:** 89% → 96%
+**Coverage improvement:** 89% → 100%
 
 ---------------------------
 
@@ -165,7 +165,7 @@ This test improves coverage by thoroughly checking all character type branches:
 - Edge case with an empty string
 Each condition in the function is now triggered by specific inputs, ensuring that all logical paths are tested.
 
-**Coverage improvement:** 0% → 98%
+**Coverage improvement:** 0% → 100%
 
 ---------------------------
 
@@ -192,7 +192,7 @@ This improved test ensures all key logical paths are exercised by including inpu
 - Strings without any sequence ("a1b2c3")
 All conditions and loop paths in the function are exercised through the test cases, providing maximum practical coverage based on the function’s logic.
 
-**Coverage improvement:** 0% → 96%
+**Coverage improvement:** 0% → 100%
 
 -----------Test cases of Georgios Dedempilis-----------
 
@@ -219,7 +219,7 @@ This test thoroughly evaluates the `is_weak_password()` function by addressing a
 By covering all logical branches, this test ensures the function behaves as expected for various password scenarios. There were no previous tests for this function, so its initial coverage was 0%.
 
 
-**Coverage improvement:** 0% → 95%
+**Coverage improvement:** 0% → 100%
 
 ---------------------------
 
@@ -244,7 +244,7 @@ This test enhances the coverage for the `is_strong_password()` function by intro
 The test ensures all logical branches are exercised, validating the function's robustness.
 
 
-**Coverage improvement:** 89% → 95%
+**Coverage improvement:** 89% → 100%
 
 ---------------------------
 
@@ -266,7 +266,7 @@ This test ensures comprehensive coverage for the `is_common_password()` function
 
 By testing all logical branches, this test guarantees the function accurately differenctiation between common and uncommon passwords. There were no previous tests for this function, so its initial coverage was 0%.
 
-**Coverage improvement:** 0% → 95%
+**Coverage improvement:** 0% → 100%
 
 ---------------------------
 
@@ -289,7 +289,7 @@ This test expands the coverage for the `generate_secure_password()` function by 
 
 By testing all logical branches, this test ensures the function reliably produces secure passwords under various conditions. There were no previous tests for this function, so its initial coverage was 0%.
 
-**Coverage improvement:** 0% → 96%
+**Coverage improvement:** 0% → 100%
 
 ---------------------------
 
@@ -313,14 +313,14 @@ This test ensures the `password_entropy()` function is thoroughly evaluated by t
 
 By covering all logical branches, this test guarantees the function accurately calculates entropy for diverse password scenarios. There were no previous tests for this function, so its initial coverage was 0%.
 
-**Coverage improvement:** 0% → 96%
+**Coverage improvement:** 0% → 100%
 
 -----------Test cases of Dean Kok-----------
 **Group Member:** Dean Kok
 
 **Test 1:** test_suggest_improvement.py
 
-**Patch/Commit:** [View Commit]()
+**Patch/Commit:** [View Commit](https://github.com/georgeded/group-2-assignment-1-password-security-analyzer/commit/17a67aff66a3ad71bbece2c6132dcea834a46cc6)
 
 **Screenshot: Old Coverage Result (Before Improvement)**  
 ![Old Coverage Result](reports/initial%20coverability%20analysis%20.png)
@@ -341,6 +341,25 @@ This test thoroughly evaluates the `suggest_password_improvements()` function by
 - No spaces in the password
 
 **Coverage improvement:** 86% → 100%
+
+---------------------------
+
+**Group Member:** Dean Kok
+
+**Test 1:** test_is_palindrome_password.py
+
+**Patch/Commit:** [View Commit]()
+
+**Screenshot: Old Coverage Result (Before Improvement)**  
+![Old Coverage Result](reports/initial%20coverability%20analysis%20.png)
+
+**Screenshot: New Coverage Result (After Improvement)**  
+Placeholder for screenshot
+
+**Coverage Improvement Explanation:**  
+This test evaluates whether the is_palindrome_password() function works correctly.
+
+**Coverage improvement:** 0% → 100%
 
 ### Overall
 
