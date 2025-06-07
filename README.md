@@ -348,7 +348,7 @@ This test thoroughly evaluates the `suggest_password_improvements()` function by
 
 **Test 1:** test_is_palindrome_password.py
 
-**Patch/Commit:** [View Commit]()
+**Patch/Commit:** [View Commit](https://github.com/georgeded/group-2-assignment-1-password-security-analyzer/commit/f34c410dbb8743bfd141ff56e27b824d9b0bd5af)
 
 **Screenshot: Old Coverage Result (Before Improvement)**  
 ![Old Coverage Result](reports/initial%20coverability%20analysis%20.png)
@@ -358,6 +358,25 @@ Placeholder for screenshot
 
 **Coverage Improvement Explanation:**  
 This test evaluates whether the is_palindrome_password() function works correctly.
+
+**Coverage improvement:** 0% → 100%
+
+---------------------------
+
+**Group Member:** Dean Kok
+
+**Test 1:** test_generate_memorable_password.py
+
+**Patch/Commit:** [View Commit]()
+
+**Screenshot: Old Coverage Result (Before Improvement)**  
+![Old Coverage Result](reports/initial%20coverability%20analysis%20.png)
+
+**Screenshot: New Coverage Result (After Improvement)**  
+Placeholder for screenshot
+
+**Coverage Improvement Explanation:**  
+This test evaluates whether the generate_memorable_password() function works correctly.
 
 **Coverage improvement:** 0% → 100%
 

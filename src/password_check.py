@@ -202,7 +202,7 @@ def is_palindrome_password(password):
         return False
     return password == password[::-1]
 
-def main():
+def main(): # not covered by tests
     print("Welcome to the Password Security Analyzer!")
     print("Choose an option:")
     print("1. Check if a password is strong")
