@@ -380,6 +380,63 @@ This test evaluates whether the generate_memorable_password() function works cor
 
 **Coverage improvement:** 0% → 100%
 
+-----------Test cases of Ibaad Rahman-----------
+
+**Group Member:** Ibaad Rahman  
+
+**Test 1:** `improved_test_count_special_characters.py`  
+**Patch/Commit:** [View Commit](https://github.com/georgeded/group-2-assignment-1-password-security-analyzer/commit/7496aa5e3b68f4a944ca20ce35a1a52377347ba5)  
+**Screenshot: Old Coverage Result (Before Improvement)**  
+![Old Coverage](reports/initial%20coverability%20analysis%20.png)  
+**Screenshot: New Coverage Result (After Improvement)**  
+![New Coverage](reports/new_coverage_result.png)  
+**Coverage Improvement Explanation:**  
+This improved test exercises every branch in `count_special_characters()` by covering:  
+- letters + digits only (returns 0)  
+- empty string (returns 0)  
+- digits‐only (returns 0)  
+- alpha‐only (returns 0)  
+- any space present (returns –1)  
+- length < 5 (returns –2)  
+- mixed letters, digits, punctuation (counts punctuation)  
+- all punctuation (counts all chars)  
+- digits + specials mixed (counts only punctuation)  
+
+**Coverage improvement:** 89% → 100%
+
+---
+
+**Test 2:** `test_reverse_password_ibaad.py`  
+**Patch/Commit:** [View Commit](https://github.com/georgeded/group-2-assignment-1-password-security-analyzer/commit/df2fceae88d9fdedeb7302ac48504714ed8ea923)  
+**Screenshot: Old Coverage Result (Before Improvement)**  
+![Old Coverage](reports/initial%20coverability%20analysis%20.png)  
+**Screenshot: New Coverage Result (After Improvement)**  
+![New Coverage](reports/new_coverage_result.png)  
+**Coverage Improvement Explanation:**  
+Adding this test now covers all cases in `reverse_password()` by exercising:  
+- empty string → `""`  
+- length 1–2 → returns original  
+- standard reversal for length ≥ 3  
+- palindrome (reverses to itself)  
+
+**Coverage improvement:** 0% → 100%
+
+---
+
+**Test 3:** `test_password_summary_ibaad.py`  
+**Patch/Commit:** [View Commit](https://github.com/georgeded/group-2-assignment-1-password-security-analyzer/commit/7e1e80649abd30798211514cb9e8a43856b9d2fa)  
+**Screenshot: Old Coverage Result (Before Improvement)**  
+![Old Coverage](reports/initial%20coverability%20analysis%20.png)  
+**Screenshot: New Coverage Result (After Improvement)**  
+![New Coverage](reports/new_coverage_result.png)  
+**Coverage Improvement Explanation:**  
+This test drives every branch in `password_summary()` by including:  
+- numeric sequence (`"1234"`) → triggers `has_sequential_chars`  
+- typical strong password (`"Ab1@xyz"`) → triggers strong‐password path, non‐common, non‐space, correct entropy, character counts, reversal and masking  
+- space‐containing input (`"password 1"`) → triggers weak, `has_spaces`, and masking logic  
+
+**Coverage improvement:** 0% → 100%
+
 ### Overall
 
 **Screenshot: Old Coverage Result (Before Improvement)**  
