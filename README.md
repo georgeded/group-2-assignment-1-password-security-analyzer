@@ -127,7 +127,7 @@ This test verifies that the count_special_characters function correctly returns 
 ![Old Coverage Result](reports/initial%20coverability%20analysis%20.png)
 
 **Screenshot: New Coverage Result (After Improvement)**
-Placeholder for screenshot
+![New Coverage Result](reports/final_coverability.png)
 
 **Coverage Improvement Explanation:**
 This improved test significantly expands the coverage for the mask_password() function. While the initial test only checked medium and small passwords, this improved version includes edge cases such as:
@@ -152,7 +152,7 @@ These test cases activate all logical branches in the function and ensure correc
 ![Old Coverage Result](reports/initial%20coverability%20analysis%20.png)
 
 **Screenshot: New Coverage Result (After Improvement)**
-Placeholder for screenshot
+![New Coverage Result](reports/final_coverability.png)
 
 **Coverage Improvement Explanation:**
 There were no previous tests for the character_type_count() function, so its initial coverage was 0%.
@@ -179,7 +179,7 @@ Each condition in the function is now triggered by specific inputs, ensuring tha
 ![Old Coverage Result](reports/initial%20coverability%20analysis%20.png)
 
 **Screenshot: New Coverage Result (After Improvement)**
-Placeholder for screenshot
+![New Coverage Result](reports/final_coverability.png)
 
 **Coverage Improvement Explanation:**
 There were no previous tests for the has_sequential_chars() function, so its initial coverage was 0%.
@@ -206,7 +206,7 @@ All conditions and loop paths in the function are exercised through the test cas
 ![Old Coverage Result](reports/initial%20coverability%20analysis%20.png)
 
 **Screenshot: New Coverage Result (After Improvement)**  
-Placeholder for screenshot
+![New Coverage Result](reports/final_coverability.png)
 
 **Coverage Improvement Explanation:**  
 This test thoroughly evaluates the `is_weak_password()` function by addressing all possible edge cases. It ensures the function correctly identifies weak passwords, including:
@@ -231,7 +231,7 @@ By covering all logical branches, this test ensures the function behaves as expe
 ![Old Coverage Result](reports/initial%20coverability%20analysis%20.png)
 
 **Screenshot: New Coverage Result (After Improvement)**  
-Placeholder for screenshot
+![New Coverage Result](reports/final_coverability.png)
 
 **Coverage Improvement Explanation:**  
 This test enhances the coverage for the `is_strong_password()` function by introducing edge cases that were previously untested. It ensures the function correctly identifies strong passwords and rejects weak ones, including:
@@ -256,7 +256,7 @@ The test ensures all logical branches are exercised, validating the function's r
 ![Old Coverage Result](reports/initial%20coverability%20analysis%20.png)
 
 **Screenshot: New Coverage Result (After Improvement)**  
-Placeholder for screenshot
+![New Coverage Result](reports/final_coverability.png)
 
 **Coverage Improvement Explanation:**  
 This test ensures comprehensive coverage for the `is_common_password()` function by testing various scenarios. It validates the function's ability to:
@@ -278,7 +278,7 @@ By testing all logical branches, this test guarantees the function accurately di
 ![Old Coverage Result](reports/initial%20coverability%20analysis%20.png)
 
 **Screenshot: New Coverage Result (After Improvement)**  
-Placeholder for screenshot
+![New Coverage Result](reports/final_coverability.png)
 
 **Coverage Improvement Explanation:**  
 This test expands the coverage for the `generate_secure_password()` function by addressing edge cases and validating its behavior for different inputs. It ensures the function:
@@ -301,7 +301,7 @@ By testing all logical branches, this test ensures the function reliably produce
 ![Old Coverage Result](reports/initial%20coverability%20analysis%20.png)
 
 **Screenshot: New Coverage Result (After Improvement)**  
-Placeholder for screenshot
+![New Coverage Result](reports/final_coverability.png)
 
 **Coverage Improvement Explanation:**  
 This test ensures the `password_entropy()` function is thoroughly evaluated by testing a wide range of inputs. It validates the function's ability to calculate entropy for:
@@ -326,7 +326,7 @@ By covering all logical branches, this test guarantees the function accurately c
 ![Old Coverage Result](reports/initial%20coverability%20analysis%20.png)
 
 **Screenshot: New Coverage Result (After Improvement)**  
-Placeholder for screenshot
+![New Coverage Result](reports/final_coverability.png)
 
 **Coverage Improvement Explanation:**  
 This test thoroughly evaluates the `suggest_password_improvements()` function by addressing all possible edge cases. It ensures the function correctly identifies passwords which can be improved, based on the absence of certain key characteristics of strong passwords. It checks the following:
@@ -354,7 +354,7 @@ This test thoroughly evaluates the `suggest_password_improvements()` function by
 ![Old Coverage Result](reports/initial%20coverability%20analysis%20.png)
 
 **Screenshot: New Coverage Result (After Improvement)**  
-Placeholder for screenshot
+![New Coverage Result](reports/final_coverability.png)
 
 **Coverage Improvement Explanation:**  
 This test evaluates whether the is_palindrome_password() function works correctly.
@@ -373,6 +373,7 @@ This test evaluates whether the is_palindrome_password() function works correctl
 ![Old Coverage Result](reports/initial%20coverability%20analysis%20.png)
 
 **Screenshot: New Coverage Result (After Improvement)**  
+![New Coverage Result](reports/final_coverability.png)
 
 **Coverage Improvement Explanation:**  
 This test evaluates whether the generate_memorable_password() function works correctly.
@@ -385,7 +386,6 @@ This test evaluates whether the generate_memorable_password() function works cor
 ![Old Coverage Result](reports/initial%20coverability%20analysis%20.png)
 
 **Screenshot: New Coverage Result (After Improvement)**  
-Placeholder for screenshot
 ![New Coverage Result](reports/final_coverability.png)
 
 ## Statement of individual contributions
