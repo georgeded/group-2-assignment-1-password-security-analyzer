@@ -367,7 +367,7 @@ This test evaluates whether the is_palindrome_password() function works correctl
 
 **Test 1:** test_generate_memorable_password.py
 
-**Patch/Commit:** [View Commit]()
+**Patch/Commit:** [View Commit](https://github.com/georgeded/group-2-assignment-1-password-security-analyzer/commit/203b91e077484c7b86f1c63e5820ea42a6681b89)
 
 **Screenshot: Old Coverage Result (Before Improvement)**  
 ![Old Coverage Result](reports/initial%20coverability%20analysis%20.png)
