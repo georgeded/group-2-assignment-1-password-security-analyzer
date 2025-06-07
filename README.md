@@ -315,23 +315,7 @@ By covering all logical branches, this test guarantees the function accurately c
 
 **Coverage improvement:** 0% → 96%
 
--------------------------
-
-TODO: The following is supposed to be repeated for each group member
-
-TODO: Group member name
-
-TODO: Test 1
-
-TODO: Show a patch (diff) or a link to a commit made in your repository that shows the new test
-
-TODO: Provide a screenshot of the old coverage results (the same as you already showed above)
-
-TODO: Provide a screenshot of the new coverage results
-
-TODO: State the coverage improvement with a number and elaborate on why the coverage is improved
-
-Repeat for other tests...
+-----------Test cases of Dean Kok-----------
 
 ### Overall
 
