@@ -389,7 +389,7 @@ This test evaluates whether the generate_memorable_password() function works cor
 **Screenshot: Old Coverage Result (Before Improvement)**  
 ![Old Coverage](reports/initial%20coverability%20analysis%20.png)  
 **Screenshot: New Coverage Result (After Improvement)**  
-![New Coverage](reports/new_coverage_result.png)  
+![New Coverage](reports/final_coverability.png)  
 **Coverage Improvement Explanation:**  
 This improved test exercises every branch in `count_special_characters()` by covering:  
 - letters + digits only (returns 0)  
@@ -411,7 +411,7 @@ This improved test exercises every branch in `count_special_characters()` by cov
 **Screenshot: Old Coverage Result (Before Improvement)**  
 ![Old Coverage](reports/initial%20coverability%20analysis%20.png)  
 **Screenshot: New Coverage Result (After Improvement)**  
-![New Coverage](reports/new_coverage_result.png)  
+![New Coverage](reports/final_coverability.png)  
 **Coverage Improvement Explanation:**  
 Adding this test now covers all cases in `reverse_password()` by exercising:  
 - empty string → `""`  
@@ -428,7 +428,7 @@ Adding this test now covers all cases in `reverse_password()` by exercising:
 **Screenshot: Old Coverage Result (Before Improvement)**  
 ![Old Coverage](reports/initial%20coverability%20analysis%20.png)  
 **Screenshot: New Coverage Result (After Improvement)**  
-![New Coverage](reports/new_coverage_result.png)  
+![New Coverage](reports/final_coverability.png)  
 **Coverage Improvement Explanation:**  
 This test drives every branch in `password_summary()` by including:  
 - numeric sequence (`"1234"`) → triggers `has_sequential_chars`  
