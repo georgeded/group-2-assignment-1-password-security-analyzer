@@ -346,7 +346,7 @@ This test thoroughly evaluates the `suggest_password_improvements()` function by
 
 **Group Member:** Dean Kok
 
-**Test 1:** test_is_palindrome_password.py
+**Test 2:** test_is_palindrome_password.py
 
 **Patch/Commit:** [View Commit](https://github.com/georgeded/group-2-assignment-1-password-security-analyzer/commit/f34c410dbb8743bfd141ff56e27b824d9b0bd5af)
 
@@ -365,7 +365,7 @@ This test evaluates whether the is_palindrome_password() function works correctl
 
 **Group Member:** Dean Kok
 
-**Test 1:** test_generate_memorable_password.py
+**Test 3:** test_generate_memorable_password.py
 
 **Patch/Commit:** [View Commit](https://github.com/georgeded/group-2-assignment-1-password-security-analyzer/commit/203b91e077484c7b86f1c63e5820ea42a6681b89)
 
@@ -376,7 +376,7 @@ This test evaluates whether the is_palindrome_password() function works correctl
 ![New Coverage Result](reports/final_coverability.png)
 
 **Coverage Improvement Explanation:**  
-This test evaluates whether the generate_memorable_password() function works correctly.
+This test evaluates whether the generate_memorable_password() function works correctly. It checks if there correctly get generated capitalized words, ending in a special character and then a digit.
 
 **Coverage improvement:** 0% → 100%
 
