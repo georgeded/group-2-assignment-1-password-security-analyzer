@@ -109,7 +109,7 @@ This test verifies that the count_special_characters function correctly returns 
 ![Old Coverage Result](reports/initial%20coverability%20analysis%20.png)
 
 **Screenshot: New Coverage Result (After Improvement)**  
-![New Coverage Result](reports/new_coverage_result.png)
+![New Coverage Result](reports/final_coverability.png)
 
 ## Coverage improvement
 
@@ -446,8 +446,6 @@ This test drives every branch in `password_summary()` by including:
 ![New Coverage Result](reports/final_coverability.png)
 
 ## Statement of individual contributions
-
-TODO: Write what each group member did. Use the following table for that and add additional text under it if you see fit.
 
 | Member             | Three functions (names with links to the code on the repository) created                                                                 | Initial test (name)                     | Other tests (names)                                                                                     |
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------|---------------------------------------------------------------------------------------------------------|
